@@ -16,11 +16,11 @@ const user_create_post = async (req, res) => {
     console.log(req.body)
     const user = await new User(req.body)
     user.save()
-    .then((result) => {
+  /*   .then((result) => {
         res.redirect("/")
     }).catch((err) => {
         console.log(err)
-    })
+    }) */
 }
 
 module.exports = {

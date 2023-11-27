@@ -15,6 +15,7 @@ app.set('view engine', 'ejs')
 
 //middleware and static
 app.use(express.static('public'))
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 const uri = "mongodb+srv://generic_user:gL5nSaycAzXKNaBf@cluster0.ftxrjk8.mongodb.net/movieDB?retryWrites=true&w=majority"
@@ -25,13 +26,7 @@ mongoose.connect(uri)
 .catch((err) => console.log(err))
 
 app.get("/", (req, res) => {
-/*     const movies = [
-         {title: 'Interstellar', voteAvg: '56789'},
-        {title: 'The dark knight', voteAvg: '89088'},
-        {title: 'Batman', voteAvg: '102029'} 
-    ] 
-    res.render('index', {title: 'Home', movies}) */
-    res.redirect("/movies")
+    res.render('login')
 })
 
 app.use("/users", userRouter)

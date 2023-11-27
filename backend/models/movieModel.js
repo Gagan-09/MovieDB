@@ -1,20 +1,21 @@
 const mongoose = require("mongoose")
 const {Decimal128} = require("mongodb")
-const values = new mongoose.Schema({value: String})
+//const values = new mongoose.Schema({value: String})
 const movieSchema = new mongoose.Schema({
     _id:{
         type:Number,
         required: true
     },
-    genres:{
+    genres:
        /*  type:[values],
         default: undefined */
-        body: String
-    },
-    keyword:{
-        type:[values],
-        default: undefined
-    },
+         [String]
+    ,
+    keyword:
+/*         type:[values],
+        default: undefined */
+         [String]
+    ,
     title:{
         type: String,
         required: true
