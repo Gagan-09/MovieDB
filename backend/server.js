@@ -62,7 +62,7 @@ app.post('/login', async (req, res) => {
   // Logout
   app.get('/logout', (req, res) => {
     req.session.destroy(() => {
-      res.redirect('/login');
+      res.render('/login');
     });
   });
   
@@ -73,6 +73,10 @@ app.use("/directors", directorRouter)
 app.use("/movies", movieRouter)
 app.use("/ratings", ratingRouter)
 app.use("/reviews", reviewRouter)
+
+app.get('/about-us', (req, res) => {
+    res.render('about-us', {title: "About"})
+})
 
 app.use((req, res) => {
     res.status(404).render('404', {title: '404'})

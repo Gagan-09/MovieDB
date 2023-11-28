@@ -35,6 +35,10 @@ const movieSchema = new mongoose.Schema({
     director_id:{
         type: mongoose.Schema.Types.ObjectId,
         required: true
+    },
+    director:{
+        type: String,
+        required: true
     }
 })
 

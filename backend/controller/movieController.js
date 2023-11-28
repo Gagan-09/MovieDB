@@ -44,7 +44,7 @@ const movie_by_id = (req, res) => {
   ]).exec();
   Promise.all([movieQuery, directorQuery])
     .then(([movieResult, directorResult]) => {
-      console.log(directorQuery.director_name)
+      //console.log(directorQuery.director_name)
       res.render('MovieDetails', { movie: movieResult, director: directorResult, title: 'Movie Details' });
     })
     .catch((err) => {

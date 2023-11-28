@@ -76,25 +76,25 @@
       box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
     }
     /* create styles */
-    .create-user form{
+    .create-user form, .create-review form{
       max-width: 400px;
       margin: 0 auto;
     }
     .create-user input,
-    .create-user textarea{
+    .create-user textarea, .create-review input, .create-review textarea{
       display: block;
       width: 100%;
       margin: 10px 0;
       padding: 8px;
     }
-    .create-user label{
+    .create-user label, .create-review label{
       display: block;
       margin-top: 24px;
     }
     textarea{
       height: 120px;
     }
-    .create-user button{
+    .create-user button, .create-review button{
       margin-top: 20px;
       background: crimson;
       color: white;
