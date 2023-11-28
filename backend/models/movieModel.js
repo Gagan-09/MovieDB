@@ -31,6 +31,10 @@ const movieSchema = new mongoose.Schema({
     vote_count:{
         type:Number,
         required: true
+    },
+    director_id:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
     }
 })
 

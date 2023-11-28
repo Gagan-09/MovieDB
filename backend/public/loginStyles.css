@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+/* 
 body {
     font-family: sans-serif;
-}
+} */
 
 .container {
     width: 400px;
@@ -25,7 +27,7 @@ input {
 }
 
 button {
-    background-color: #04AA6D;
+    background-color: crimson;
     color: white;
     padding: 10px 20px;
     border: none;
