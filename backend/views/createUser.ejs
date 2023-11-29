@@ -2,14 +2,20 @@
 <%- include("./partials/header.ejs") %>
 
 <body>
-  <%- include("./partials/nav.ejs") %>
+  <nav>
+    <div class="site-title">
+    <h1>Movie Information Website</h1>
+    </div>
+  </nav>
 
   <div class="create-user content">
     <form action="/users/create" method="POST">
       <label for="user_name">Name:</label>
-      <input type="text" id="Name" name="Name" required>
+      <input type="text" id="Name" name="user_name" required>
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
       <label for="age">Age:</label>
       <input type="number" id="age" name="age" required>
       <label for="gender">Gender:</label>

@@ -14,13 +14,23 @@ const user_create_get = (req, res) => {
 
 const user_create_post = async (req, res) => {
     console.log(req.body)
-    const user = await new User(req.body)
-    user.save()
-  /*   .then((result) => {
-        res.redirect("/")
-    }).catch((err) => {
+     const user = new User({user_name:req.body.user_name, email: req.body.email, password: req.body.password, age: req.body.age, gender: req.body.gender})
+    await user.save()  
+/*     User.create({user_name: req.body.user_name, email: req.body.email, password: req.body.password, age: req.body.age, gender: req.body.gender})*/
+    /*  const user = User.bulkWrite([
+        {
+            insertOne: {
+                document: {user_name: req.body.user_name, email: req.body.email, password: req.body.password, age: req.body.age, gender: req.body.gender}
+            }
+        }
+     ])  */  
+     user.save()
+     .then((result) => {
+        res.redirect('/movies')
+    })
+    .catch((err) => {
         console.log(err)
-    }) */
+    })
 }
 
 module.exports = {

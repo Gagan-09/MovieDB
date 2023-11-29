@@ -2,6 +2,7 @@ const movies = require("../models/movieModel")
 const directors = require("../models/directorModel")
 const mongoose = require('mongoose')
 const ratings = require('../models/ratingModel')
+const reviews = require('../models/reviewModel')
 const movies_get = (req, res) => {
   movies.find()
     .then((result) => {
@@ -55,9 +56,9 @@ const movie_by_id = (req, res) => {
 //const movieId = 1; // Replace with the desired movie_id
 
 
-const movie_reviews = (req, res) => {
+const movie_reviews = async (req, res) => {
   const movieId = req.params.id
-  const reviewQuery = ratings.aggregate([
+  const reviewQuery = await ratings.aggregate([
     // Match ratings for a specific movie_id (assuming movie_id is linked between ratings and movies)
     {
       $match: {
@@ -102,14 +103,15 @@ const movie_reviews = (req, res) => {
       }
     }
   ]).then((result) => {
-
-  }).catch({
-
+    res.render('Review', {Review: result, id: movieId})
+  }).catch((err) => {
+      console.log(err)
   })
   console.log(reviewQuery.Reviews)
 }
 
 module.exports = {
   movies_get,
-  movie_by_id
+  movie_by_id,
+  movie_reviews
 }

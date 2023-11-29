@@ -4,11 +4,36 @@ body {
     font-family: sans-serif;
 } */
 
+body{
+    background-image: url("movie.jpeg");
+
+    background-size: cover;
+
+    /* Set background repeat to no repeat */
+    background-repeat: no-repeat;
+
+    /* Center the background image */
+    background-position: center;
+
+    /* Set a background color as a fallback in case the image is not available */
+    background-color: #f4f4f4;
+
+    /* Set the height to 100% to cover the entire viewport */
+    height: 100vh;
+
+    /* Remove margin and padding from the body */
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+
 .container {
     width: 400px;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: #f4f4f4;
 }
 
 form {
@@ -32,4 +57,8 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+p{
+    justify-content: center;
+    color: #f4f4f4;
 }
