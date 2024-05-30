@@ -35,8 +35,9 @@ const uri =
 
 mongoose
   .connect(uri)
-  .then(() => app.listen(8080, () => console.log('Server is running')))
+  .then(() => app.listen(8080, () => console.log(`Server is running on port 8080`)))
   .catch((err) => console.error(err));
+
 
 app.get('/', (req, res) => {
   res.render('login');
@@ -61,7 +62,7 @@ app.post('/login',  (req, res) => {
 
 });
 
-// Logout
+// Logout ---- destroy the session
 app.get('/logout', (req, res) => {
   req.session.destroy(() => {
     res.render('login', { msg: "Logout Successful", error: ""});

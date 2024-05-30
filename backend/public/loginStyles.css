@@ -1,27 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
-/* 
-body {
-    font-family: sans-serif;
-} */
+
 
 body{
     background-image: url("movie.jpeg");
 
     background-size: cover;
 
-    /* Set background repeat to no repeat */
     background-repeat: no-repeat;
 
-    /* Center the background image */
     background-position: center;
 
-    /* Set a background color as a fallback in case the image is not available */
     background-color: #f4f4f4;
 
-    /* Set the height to 100% to cover the entire viewport */
-    height: 100vh;
 
-    /* Remove margin and padding from the body */
+    height: 100vh;
     margin: 0;
     padding: 0;
     color: black;

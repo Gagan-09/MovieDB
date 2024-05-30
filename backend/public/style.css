@@ -29,14 +29,18 @@
     }
     nav li{
       list-style-type: none;
-      margin-left: 20px;
+      margin-left: 30px;
     }
     nav h1{
       font-size: 3em;
     }
     nav p, nav a{
-      color: #777;
+      color: #ac6b6b;
+      color: crimson;
       font-weight: 300;
+    }
+    nav p, nav a:hover{
+      color: rgb(255, 10, 59);
     }
    
     h2{
